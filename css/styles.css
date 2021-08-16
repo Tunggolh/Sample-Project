@@ -1,5 +1,6 @@
 :root{
     --color-primary: #a73d27;
+    --color-secondary: #84afa6;
     --color-heading: #fff;
     --color-body: #d1d1d1;
 }
@@ -26,9 +27,10 @@ body {
 .container{
     width: 80vw;
     margin: 8rem auto;
-    background: rgba(0,0,0,.7);
+    background: rgba(0,0,0,.8);
     border-radius: 15px;
     overflow: hidden;
+    box-shadow: 0 0 20px 5px #4c4b4b;
     
     
 }
@@ -50,30 +52,66 @@ h1,h2,h3{
     color: var(--color-heading);
 }
 
+
 .section__header{
+    text-align: center;
+    background: var(--color-secondary);
+    padding: 2rem;
+    margin: 0;
     font-size: 2.3rem;
 }
 
-/* About */
-.about__content{
+.section__content{
+    border: 2px dashed var(--color-primary);
+    border-radius: 20px;
+    overflow: hidden;
+}
+.content{
     margin: 3rem 0;
    text-align: center;
+   font-weight: 400;
+}
+
+.about, .synopsis{
+    margin-bottom: 10rem;
 }
 
 .about__img{
+    max-width: 320px;
+}
+
+.synopsis__img{
+    max-width: 320px;
+}
+
+.content__image{
     width: 100%;
-    max-width: 350px;
     box-shadow: 0 0 10px 10px rgb(61, 42, 42);
 }
 
 .content__body{
-    padding-top: 2rem;
+    padding: 2rem 1.5rem 1.5rem;
     font-size: 2.3rem;
+    text-align: left;
+}
+
+.section__content::after{
+    content: '';
+    display: block;
+    clear: both;
 }
 
 @media screen and (min-width: 768px){
     .container{
         max-width: 1140px;
+    }
+    
+    .about__img{
+        max-width: 370px;
+    }
+    
+    .synopsis__img{
+        max-width: 500px;
     }
     
     .body__header{
@@ -82,6 +120,7 @@ h1,h2,h3{
 
     .section__header{
         font-size: 3rem;
+        margin-bottom: 3.5rem;
     }
 
     .content__body{
@@ -90,13 +129,30 @@ h1,h2,h3{
 }
 
 @media screen and (min-width: 1024px){
-    .about__img{
-        float: left;
-        max-width: 300px;
-        margin: 0 3rem 3rem 0;
+    .about .content{
+        display: flex;
+        flex-direction: row;
     }
+
+    .about__img{
+        margin-left: 1rem;
+    }
+
+    .synopsis__img{
+        float: right;
+        margin: 0 1rem 1rem 2rem
+    }
+
+    .synopsis__img{
+        max-width: 350px;
+    }
+
+    .about__img{
+        max-width: 300px;
+    }
+
     .content__body{
-        padding: 0 1rem 0 4rem;
+        padding: 0 2rem 0;
         margin: 0;
         font-size: 2.5rem;
         text-align: left;
