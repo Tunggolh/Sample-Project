@@ -1,8 +1,8 @@
 :root{
-    --color-primary: #a73d27;
-    --color-secondary: #84afa6;
-    --color-heading: #fff;
-    --color-body: #d1d1d1;
+    --color-primary: #cc4942fb;
+    --color-secondary: rgba(228,212,179,.7);
+    --color-heading: #281322;
+    --color-body: #dadada;
 }
 
 *, *::before, *::after{
@@ -26,13 +26,14 @@ body {
 
 .container{
     width: 80vw;
-    margin: 8rem auto;
+    margin: 8rem auto;    
+}
+
+.container-design{
     background: rgba(0,0,0,.8);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 0 20px 5px #4c4b4b;
-    
-    
+    box-shadow: 0 0 20px 5px #d88688;
 }
 
 .body__header{
@@ -43,6 +44,9 @@ body {
    
 }
 .section__content{
+    border: 2px dashed #f9d3bc;
+    border-radius: 20px;
+    overflow: hidden;
     color: var(--color-body);
     margin: 2rem 3rem;
     
@@ -56,16 +60,12 @@ h1,h2,h3{
 .section__header{
     text-align: center;
     background: var(--color-secondary);
+    font-weight: 800;
     padding: 2rem;
     margin: 0;
     font-size: 2.3rem;
 }
 
-.section__content{
-    border: 2px dashed var(--color-primary);
-    border-radius: 20px;
-    overflow: hidden;
-}
 .content{
     margin: 3rem 0;
    text-align: center;
