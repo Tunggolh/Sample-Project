@@ -30,7 +30,7 @@ body {
 }
 
 .container-design{
-    background: rgba(0,0,0,.8);
+    background: rgba(40, 19, 34, 0.8);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 0 20px 5px #d88688;
@@ -242,7 +242,6 @@ h1,h2,h3{
 }
 
 .footer{
-    background: rgba(0,0,0,.8);
     text-align: center;
     padding: 2rem 0;
 }
@@ -256,3 +255,101 @@ h1,h2,h3{
     margin: 1rem;
     padding: 1.5rem;
 }
+
+.footer .logo{
+    cursor: pointer;
+}
+
+.black--bg{
+    background: rgba(0,0,0,.90);
+}
+
+/* Navigation Bar */
+.icon{
+    width: 40px;
+    height: 40px;
+}
+.filter{
+    filter: invert(95%) sepia(5%) saturate(0%) hue-rotate(274deg) brightness(103%) contrast(105%);
+}
+
+.list{
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav{
+    display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     padding: 0 1rem;
+     align-items: center;
+ }
+
+.nav__list {
+     margin: 0;
+     width: 100%;
+}
+
+.nav__item {
+     padding: 2rem 1rem;
+     border-bottom: 1px solid #222;
+}
+   
+.nav__item > a {
+    text-decoration: none;
+     color: #d2d0db;
+     transition: color 0.3s;
+}
+   
+.nav__item > a:hover {
+     color: #fff;
+}
+   
+.nav__toggler {
+     opacity: 0.5;
+     transition: box-shadow 0.15s;
+     cursor: pointer;
+}
+   
+.nav.collapsible--expanded .nav__toggler {
+     opacity: 1;
+     box-shadow: 0 0 0 3px #666;
+     border-radius: 5px;
+}
+
+.collapsible__content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__content {
+    max-height: 100vh;
+    opacity: 1;
+}
+
+
+ @media screen and (min-width: 768px) {
+    .nav__toggler {
+        display: none;
+    }
+    .nav__list {
+       width: auto;
+       display: flex;
+       font-size: 1.6rem;
+       max-height: 100%;
+       opacity: 1;
+     }
+
+     .nav__item {
+       border: 0;
+       padding: 0 2.5rem;
+     }
+}
+
+
+
+
+
